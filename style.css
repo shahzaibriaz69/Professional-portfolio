@@ -332,3 +332,95 @@ body {
         left: 15px;
     }
 }
+
+/* Skills Section Base */
+.skills-section {
+    padding: 100px 10%;
+    background-color: var(--bg-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Progress Bars Styling */
+.skill-bar {
+    margin-bottom: 30px;
+}
+
+.skill-bar .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.skill-bar .bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    position: relative;
+}
+
+.skill-bar .bar span {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--accent-color); /* Gold Color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 180, 0, 0.3);
+}
+
+/* Percentage Widths */
+.html-css { width: 95%; }
+.php { width: 90%; }
+.mysql { width: 85%; }
+.design { width: 80%; }
+
+/* Right Side Cards */
+.skills-right {
+    display: grid;
+    gap: 20px;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.highlight-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.highlight-card .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.highlight-card h3 {
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
