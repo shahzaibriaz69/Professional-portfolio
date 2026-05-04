@@ -336,7 +336,11 @@ body {
 /* Skills Section Base */
 .skills-section {
     padding: 100px 10%;
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
+}
+
+.skills-section h2{
+    color: var(--text-white);
 }
 
 .skills-grid {
@@ -423,4 +427,55 @@ body {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Services Section Styles */
+.services-section {
+    padding: 100px 10%;
+    background-color: #161a23; /* Slightly different dark shade for contrast */
+}
+
+.services-section h2 {
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.services-grid-business {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    background: rgba(255, 180, 0, 0.02);
+}
+
+.service-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.service-item h3 {
+    color: var(--text-white);
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.service-item p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 15px;
 }
