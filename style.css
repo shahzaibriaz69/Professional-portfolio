@@ -194,3 +194,141 @@ body {
     0% { transform: translate(-50%, 0); opacity: 1; }
     100% { transform: translate(-50%, 15px); opacity: 0; }
 }
+
+.about-section {
+    padding: 120px 10%;
+    background-color: var(--bg-color);
+    color: var(--text-white);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* Image Styling */
+.about-img-wrapper {
+    flex: 1;
+    min-width: 320px;
+    position: relative;
+}
+
+.image-box {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%); /* Thora vintage/classy look */
+    transition: 0.5s;
+}
+
+.image-box:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.decorative-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--accent-color);
+    top: 25px;
+    left: -25px;
+    z-index: 1;
+}
+
+/* Content Styling */
+.about-content {
+    flex: 1.2;
+    min-width: 350px;
+}
+
+.sub-heading {
+    color: var(--accent-color);
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.section-title span {
+    color: var(--accent-color);
+}
+
+.description {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Info Grid */
+.personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+.info-item span {
+    display: block;
+    color: var(--accent-color);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+.about-cta {
+    margin-top: 30px;
+}
+
+/* Icons ya Features ke liye spacing */
+.info-item {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03); /* Halka sa box background */
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color); /* Gold line for business feel */
+}
+
+.info-item span {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .about-container {
+        gap: 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .personal-info {
+        text-align: left;
+    }
+
+    .decorative-box {
+        left: 15px;
+    }
+}
