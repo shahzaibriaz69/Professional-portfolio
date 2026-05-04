@@ -73,6 +73,64 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Shuru mein screen se bahar rahega */
+        height: 100vh;
+        width: 70%; /* Mobile screen ka 70% area cover karega */
+        background: #1a1e29; /* Wahi Navy Blue theme */
+        flex-direction: column; /* Links ek ke niche ek ayen gay */
+        justify-content: center;
+        transition: 0.5s ease-in-out;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    /* Jab menu open ho to ye class add hogi */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    /* 2. Hamburger Icon Dikhao */
+    .menu-toggle {
+        display: block; /* Desktop par ye display:none hona chahiye */
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: var(--accent-color); /* Gold color */
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    /* 3. Animation for X (Jab menu khulay) */
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Desktop par Toggle chupa do */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
 .hero-section {
     height: 100vh; /* Full screen height */
     display: flex;

@@ -11,3 +11,23 @@ window.addEventListener('scroll', function() {
         header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
     }
 });
+
+// Mobile Menu Selection
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    // Menu links ko screen par laane ke liye
+    navLinks.classList.toggle('active');
+    
+    // Hamburger icon ko 'X' banane ke liye
+    menuToggle.classList.toggle('is-active');
+});
+
+// Jab kisi link par click ho to menu khud band ho jaye
+document.querySelectorAll('.nav-links li a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('is-active');
+    });
+});
